@@ -1,5 +1,3 @@
-import './colors.css';
-
 export const Light = {
     name: 'light',
     primary: '#353535',
