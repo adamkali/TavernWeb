@@ -1,17 +1,17 @@
 import '../styles/globals.css';
 import Image from 'next/image';
+import Button from './components/Button';
+
+import { BsFillPersonFill } from '@react-icons/all-files/bs/BsFillPersonFill';
+import { BsFillPersonPlusFill } from '@react-icons/all-files/bs/BsFillPersonPlusFill';
+
+import Link from 'next/link';
 
 export default function RootLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
-    const buttonStyle0 = `flex flex1 flex-row justify-center items-center
-    border-b-4 border-b-vaporwave-accent-2 bg-gradient-to-t 
-    from-vaporwave-accent-2 text-vaporwave-secondary 
-    py-2 px-4 mx-4 rounded-b hover:scale-125 transform transition 
-    duration-500 ease-in-out shadow-xl shadow-vaporwave-dark-2`;
-
     return (
         <html lang="en">
             <head>
@@ -26,36 +26,36 @@ export default function RootLayout({
                 />
             </head>
             <body className="bg-vaporwave-normal-2 text-vaporwave-primary">
-                <div className="flex flex1 flex-row justify-evenly items-top">
+                <div className="flex justify-evenly items-top">
                     <div className="w-1/5"> </div>
                     {/* the title goes in the middle */}
-                    <div className="w-3/5 my-14">
+                    <div className="w-3/5 my-2 h-1/10 ">
                         <Image
                             src="/tavern-transparent.png"
                             alt="tavern-logo"
-                            width={1400}
+                            width={600}
                             height={500}
                         />
                     </div>
 
                     {/* these buttons go to the right */}
-                    <div className="flex flex1 flex-row">
-                        <div className="flex flex1 flex-col justify-center items-center pr-8">
-                            <a
-                                href="/welcome/login"
-                                className="button0 hover:scale-125 transform transition duration-500 ease-in-out"
-                            >
-                                Login
-                            </a>
-                        </div>
-                        <div className="flex flex1 flex-col justify-center items-center pr-8">
-                            <a
-                                href="/welcome/signup"
-                                className="button0 hover:scale-125 transform transition duration-500 ease-in-out"
-                            >
-                                Sign Up
-                            </a>
-                        </div>
+                    <div className="mb-5 flex flex-row justify-center">
+                        <Button
+                            bgColor="accent"
+                            txColor="primary"
+                            icon={<BsFillPersonFill />}
+                            hover={true}
+                        >
+                            <Link href="/welcome/login">Login</Link>
+                        </Button>
+                        <Button
+                            bgColor="accent"
+                            txColor="primary"
+                            icon={<BsFillPersonPlusFill />}
+                            hover={true}
+                        >
+                            <Link href="/welcome/signup">Signup</Link>
+                        </Button>
                     </div>
                 </div>
                 {children}

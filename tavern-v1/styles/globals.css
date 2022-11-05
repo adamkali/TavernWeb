@@ -4,7 +4,7 @@
 
 @layer utilities {
     .card {
-        background: linear-gradient(0deg, #aa65ff 0%, #00114d00 100%);
+        postion: absolute;
         padding-top: 3rem;
         padding-bottom: 6rem;
         padding-left: 3rem;
@@ -14,26 +14,41 @@
         border-bottom: 3rem;
         border-left: 0rem;
         border-right: 0rem;
-        border-bottom-color: #aa65ff;
         border-bottom-left-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
         width: 60%;
         height: 50rem;
+        z-index: 10;
+    }
+
+    .card-background {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, #aa65ff 0%, #00114d00 100%);
+        z-index: -1;
+        border-top: 0rem;
+        border-bottom: 3rem;
+        border-left: 0rem;
+        border-right: 0rem;
+        border-bottom-color: #aa65ff;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
         box-shadow: 0 20px 25px -5px #aa65ff, 0 4px 5px -6px #00114d00;
-        color: #38fae0;
     }
 
     .card-body {
+        position: relative;
+        z-index: 10;
         font-size: 1.5rem;
         font-weight: 400;
         line-height: 1.5;
-        color: #38fae0;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
+        top: 0;
+        left: 0;
     }
 
     .card-body-lg {
+        position: relative;
+        z-index: 10;
         font-size: 3rem;
         font-weight: 400;
         line-height: 1.5;
@@ -88,6 +103,83 @@
     }
 
     .button0 {
+        border-bottom-width: 4px;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        font-size: 0.5rem;
+        font-weight: 100;
+        line-height: 1.5;
+    }
+
+    .button0-text {
+        padding-top: 0.5rem;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    .button0-lg {
+        border-bottom-width: 4px;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        padding-top: 2.5rem;
+        padding-bottom: 4rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        font-size: 2rem;
+        font-weight: 100;
+        line-height: 1.5;
+    }
+
+    .button0--normal {
+        background: linear-gradient(0deg, #001e8c 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #001e8c, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #7390fb;
+    }
+
+    .button0-lg--normal {
+        background: linear-gradient(0deg, #001e8c 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #001e8c, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #7390fb;
+    }
+
+    .button0--accent {
+        background: linear-gradient(0deg, #b30086 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #b30086, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #ff00ff;
+    }
+
+    
+    .button0-lg--accent {
+        background: linear-gradient(0deg, #b30086 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #b30086, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #ff00ff;
+    }
+
+    .button0--dark {
+        background: linear-gradient(0deg, #5104af 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #5104af, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #aa65ff;
+    }
+
+    
+    .button0-lg--dark {
+        background: linear-gradient(0deg, #5104af 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #5104af, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #aa65ff;
+    }
+
+    .input-container {
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -109,25 +201,44 @@
         line-height: 1.5;
     }
 
-    .button0-lg {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        border-bottom-width: 4px;
-        border-bottom-color: #b30086;
-        border-bottom-left-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
-        background: linear-gradient(0deg, #b30086 0%, #00114d00 100%);
-        color: #0099cc;
-        padding-top: 2.5rem;
-        padding-bottom: 4rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        margin-left: 3rem;
-        margin-right: 3rem;
-        box-shadow: 0 20px 25px -5px #b30086, 0 4px 5px -6px #00114d00; 
-        font-size: 2rem;
-        font-weight: 100;
-        line-height: 1.5;
+    .animate-light-flicker {
+        animation: light-flicker 1.5s infinite;
     }
+
+    @keyframes light-flicker {
+        0% {
+            opacity: 1;
+        }
+        10% {
+            opacity: 0.80;
+        }
+        20% {
+            opacity: 0.60;
+        }
+        30% {
+            opacity: 0.8;
+        }
+        40% {
+            opacity: 0.75;
+        }
+        50% {
+            opacity: 0.60;
+        }
+        60% {
+            opacity: 0.75;
+        }
+        70% {
+            opacity: 0.8;
+        }
+        80% {
+            opacity: 0.90;
+        }
+        87.5% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
 }
