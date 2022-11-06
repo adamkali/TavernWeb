@@ -14,6 +14,8 @@ export default function Button({ ...props }): JSX.Element {
                 return 'text-vaporwave-secondary inset-0 group-hover:secondary-shine-lg absolute group-hover:scale-125 z-10 ';
             case 'tertiary':
                 return 'text-vaporwave-tertiary inset-0 group-hover:tertiary-shine-lg absolute group-hover:scale-125 z-10';
+            case '':
+                return 'hidden';
             default:
                 return 'text-vaporwave-primary inset-0  group-hover:primary-shine-lg absolute group-hover:scale-125 z-10';
         }
@@ -34,6 +36,8 @@ export default function Button({ ...props }): JSX.Element {
                 return 'button0 button0--accent';
             case 'dark':
                 return 'button0 button0--dark';
+            case 'hidden':
+                return 'hidden button0';
             default:
                 return 'button0 button0--normal';
         }

@@ -1,11 +1,5 @@
 'use client';
 
-import {
-    faPerson,
-    faPersonChalkboard,
-    faPersonDressBurst,
-    faPersonRunning,
-} from '@fortawesome/free-solid-svg-icons';
 import { BsFillPersonFill } from '@react-icons/all-files/bs/BsFillPersonFill';
 import { BsFillPersonPlusFill } from '@react-icons/all-files/bs/BsFillPersonPlusFill';
 import { AiOutlineDoubleLeft } from '@react-icons/all-files/ai/AiOutlineDoubleLeft';
@@ -42,12 +36,12 @@ export default function WelcomeList(): JSX.Element {
     return (
         <div className="flex flex-1 flex-col justify-center items-center">
             <Card>
-                <div className="flex flex-1 justify-center relative">
-                    <div className="justify-center items-center text-4xl w-full">
+                <div className="flex flex-1 flex-col justify-between relative">
+                    <div className="top-0 justify-center items-center text-4xl w-full px-32 min-h-96 max-h-96">
                         {displayedElement}
                     </div>
-                    <div className="grid grid-cols-2 justify-center align-bottom w-full">
-                        <div className="flex flex-1 justify-center mb-12">
+                    <div className="bottom-0 grid grid-rows-2 justify-center w-full">
+                        <div className="flex flex-1 flex-row justify-evenly mb-12">
                             {element !== 0 ? (
                                 <Button
                                     bgColor="accent"
@@ -57,9 +51,13 @@ export default function WelcomeList(): JSX.Element {
                                     onClick={() => changeElement(-1)}
                                 />
                             ) : (
-                                <div className="w-12" />
+                                <Button 
+                                    bgColor="hidden"
+                                    txColor="hidden"
+                                    hover={false}
+                                />
                             )}
-                            {element !== WelcomePList.length ? (
+                            {element !== WelcomePList.length -1 ? (
                                 <Button
                                     bgColor="accent"
                                     txColor="primary"
@@ -68,10 +66,13 @@ export default function WelcomeList(): JSX.Element {
                                     onClick={() => changeElement(1)}
                                 />
                             ) : (
-                                <div className="w-12" />
-                            )}
+                                <Button 
+                                    bgColor="hidden"
+                                    txColor="hidden"
+                                    hover={false}
+                                />                            )}
                         </div>
-                        <div className="flex flex1 flex-row justify-center align-bottom">
+                        <div className="flex flex-1 flex-row justify-evenly mb-12">
                             <Button
                                 bgColor="accent"
                                 txColor="primary"
