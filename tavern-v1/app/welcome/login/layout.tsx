@@ -14,16 +14,6 @@ export default function RootLayout({
             <Card>
                 {children}
             </Card>
-            <p className='mt-12'>
-                <Button
-                    bgColor=""
-                    txColor=""
-                    hover={true}
-                    onClick={() => { window.location.href = "/welcome/signup" }}
-                >
-                    Sign Up
-                </Button>
-            </p>
         </div>
     );
 }

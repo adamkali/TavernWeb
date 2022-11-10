@@ -1,4 +1,4 @@
-import * as TavernProfile from './clients';
+import TavernProfile from './clients';
 
 // export everyting from ./models as TavernModels
 export * as TavernModels from './models';

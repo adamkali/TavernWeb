@@ -1,5 +1,8 @@
-import UserClient from './User';
-import CharacterClient from './Character';
-import AuthClient from './Auth';
+import * as Requests from "./TavernProfile";
 
-export { UserClient, CharacterClient, AuthClient };
+export default {
+    login: Requests.Login,
+    signup: Requests.Signup,
+    verify: Requests.Verify,
+    me: Requests.Me,
+} as const;

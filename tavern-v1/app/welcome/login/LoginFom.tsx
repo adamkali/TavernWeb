@@ -10,22 +10,21 @@
 import React, { useState, useMemo, useEffect } from 'react';
 
 // ----- Icon Imports ----- //
-import { BsPersonSquare } from '@react-icons/all-files/bs/BsPersonSquare';
+import { BsFillPersonFill } from '@react-icons/all-files/bs/BsFillPersonFill';
+import { BsFillUnlockFill } from '@react-icons/all-files/bs/BsFillUnlockFill';
+import { FaCheck } from '@react-icons/all-files/fa/FaCheck';
 
 // ----- Tavern Imports ----- //
-import { TavernModels } from '../../../providers/receivers';
+import TavernProfile, { TavernModels } from '../../../providers/receivers';
 import Input from '../../components/Input';
+import Button from '../../components/Button';
+import * as Authenticate from '../../../providers/receivers/Authenticate';
+import Link from 'next/link';
 
 // ----- Tavern Definis ----- //
 type AuthRequest = TavernModels.TavernRequests.LoginRequest;
 
-export default function LoginForm({
-    children,
-    props,
-}: {
-    children: JSX.Element;
-    props: any;
-}): JSX.Element {
+export default function LoginForm(): JSX.Element {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [token, setToken] = useState({} as AuthRequest);
@@ -39,13 +38,25 @@ export default function LoginForm({
         });
     }, [username, password]);
 
+    const onSubmit = () => {
+        TavernProfile.login({ body: token }).then((resp) => {
+            resp.check() ? resp.run((r) => {
+                Authenticate.setToken(r);
+                alert('Logged in!');
+            }) : console.log(resp.error());
+        },
+        (err) => {
+            console.log(err);
+        });
+    };
+
     return (
         <div className="flex flex-1 flex-col justify-end">
-            <div>
+            <div className='grid grid-rows-3 mb-16 px-8'>
                 <Input
                     props={{
                         label: 'Username',
-                        icon: <div>Icon</div>,
+                        icon: <BsFillPersonFill />,
                         type: 'email',
                         placeholder: 'HeroMan100',
                         value: username,
@@ -56,7 +67,6 @@ export default function LoginForm({
                 <Input
                     props={{
                         label: 'Password',
-                        icon: <div>Icon</div>,
                         type: 'password',
                         placeholder: '********',
                         value: password,
@@ -65,6 +75,22 @@ export default function LoginForm({
                     }}
                 />
             </div>
+            <div className='px-8'>
+                <Button
+                    bgColor="accent"
+                    txColor="primary"
+                    icon={<FaCheck />}
+                    hover={true}
+                    onClick={onSubmit}
+                >
+                    Login
+                </Button>
+            </div>
+            <p>Don't have an account? Then click 
+            <Link
+                href="/welcome/signup"
+                className='text-vaporwave-secondary secondary-shine'
+            >here!</Link></p>
         </div>
     );
 }

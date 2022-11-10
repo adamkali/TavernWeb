@@ -29,7 +29,7 @@ export default function Input({ props }: { props: any }): JSX.Element {
 
     return (
         <div
-            className={`card card-body mb-4 ${bgColor + ' ' + txColor}`}
+            className={`card card-body mb-4 ${bgColor + ' ' + txColor} animate-light-flicker`}
         >
             <div>{props.label}</div>
             <div className="text-vaporwave-secondary">
