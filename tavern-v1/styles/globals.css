@@ -1,4 +1,271 @@
+<<<<<<< HEAD
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "./base.css";
+=======
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer utilities {
+    .card {
+        position: absolute;
+        padding-top: 3rem;
+        padding-bottom: 6rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-bottom: 3rem;
+        border-top: 0rem;
+        border-bottom: 3rem;
+        border-left: 0rem;
+        border-right: 0rem;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        width: 60%;
+        height: 50rem;
+        z-index: 10;
+    }
+
+    .card-background {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, #aa65ff 0%, #00114d00 100%);
+        z-index: -1;
+        border-top: 0rem;
+        border-bottom: 3rem;
+        border-left: 0rem;
+        border-right: 0rem;
+        border-bottom-color: #aa65ff;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        box-shadow: 0 20px 25px -5px #aa65ff, 0 4px 5px -6px #00114d00;
+    }
+
+    .card-body {
+        position: relative;
+        z-index: 10;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.5;
+        top: 0;
+        left: 0;
+    }
+
+    .card-body-lg {
+        position: relative;
+        z-index: 10;
+        font-size: 3rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #38fae0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-body-sm {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #38fae0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-body-xl {
+        font-size: 5rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #38fae0;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .primary-shine {
+        text-shadow: #38fae0 1px 1px 15px;
+    }
+
+    .primary-shine-lg {
+        text-shadow: #38fae0 1px 1px 30px;
+    }
+
+    .secondary-shine {
+        text-shadow: #0099cc 1px 1px 15px;
+    }
+
+    .secondary-shine-lg {
+        text-shadow: #0099cc 1px 1px 30px;
+    }
+
+    .tertiary-shine {
+        text-shadow: #FF00FF 1px 1px 15px;
+    }
+
+    .tertiary-shine-lg {
+        text-shadow: #FF00FF 1px 1px 30px;
+    }
+
+    .button0 {
+        border-bottom-width: 4px;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        font-size: 0.5rem;
+        font-weight: 100;
+        line-height: 1.5;
+    }
+
+    .button0-text {
+        padding-top: 0.5rem;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+
+    .button0-lg {
+        border-bottom-width: 4px;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        padding-top: 2.5rem;
+        padding-bottom: 4rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        font-size: 2rem;
+        font-weight: 100;
+        line-height: 1.5;
+    }
+
+    .button0--normal {
+        background: linear-gradient(0deg, #001e8c 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #001e8c, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #7390fb;
+    }
+
+    .button0-lg--normal {
+        background: linear-gradient(0deg, #001e8c 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #001e8c, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #7390fb;
+    }
+
+    .button0--accent {
+        background: linear-gradient(0deg, #b30086 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #b30086, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #ff00ff;
+    }
+
+    
+    .button0-lg--accent {
+        background: linear-gradient(0deg, #b30086 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #b30086, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #ff00ff;
+    }
+
+    .button0--dark {
+        background: linear-gradient(0deg, #5104af 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #5104af, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #aa65ff;
+    }
+
+    
+    .button0-lg--dark {
+        background: linear-gradient(0deg, #5104af 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #5104af, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #aa65ff;
+    }
+
+    .input-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-bottom-width: 4px;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        font-size: 1rem;
+        font-weight: 100;
+        line-height: 1.5;
+    }
+
+    .input--primary {
+        background: linear-gradient(0deg, #001e8c 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #001e8c, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #7390fb;
+    }
+
+    .input--accent {
+        background: linear-gradient(0deg, #b30086 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #b30086, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #ff00ff;
+    }
+
+    .input--dark {
+        background: linear-gradient(0deg, #5104af 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #5104af, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #aa65ff;
+    }
+
+    .input-holder {
+        outline: none;
+        border: none;
+        background: transparent;
+    }
+
+    .animate-light-flicker {
+        animation: light-flicker 1.5s infinite;
+    }
+
+    @keyframes light-flicker {
+        0% {
+            opacity: 1;
+        }
+        10% {
+            opacity: 0.80;
+        }
+        20% {
+            opacity: 0.60;
+        }
+        30% {
+            opacity: 0.8;
+        }
+        40% {
+            opacity: 0.75;
+        }
+        50% {
+            opacity: 0.60;
+        }
+        60% {
+            opacity: 0.75;
+        }
+        70% {
+            opacity: 0.8;
+        }
+        80% {
+            opacity: 0.90;
+        }
+        87.5% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+}
+>>>>>>> Vaporwave

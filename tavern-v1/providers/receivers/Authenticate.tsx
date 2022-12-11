@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import AsyncStorage from '@react-native-async-storage/async-storage';
+=======
+import { AxiosRequestHeaders } from 'axios';
+>>>>>>> Vaporwave
 import { TavernTypes } from './models';
 
 type AuthToken = TavernTypes.AuthToken;
 
+<<<<<<< HEAD
 
 // make a isLogged in function to check if the AuthToken is in the storage
 // the token's key is "UserToken"
@@ -75,3 +80,34 @@ export const setFirstTime = async (): Promise<void> => {
         resolve();
     });
 };
+=======
+// check if there is a token in local storage
+export function checkToken(): AuthToken | null {
+    const token = localStorage.getItem('token');
+    if (token) {
+        return JSON.parse(token);
+    }
+    return null;
+}
+
+// set the token in local storage
+export function setToken(token: AuthToken): void {
+    localStorage.setItem('token', JSON.stringify(token));
+}
+
+// remove the token from local storage
+export function logout(): void {
+    localStorage.removeItem('token');
+    window.location.href = '/';
+}
+
+// construct AxiosRequestHeaders with the token.authHash
+export function getAuthHeaders(): AxiosRequestHeaders {
+    const token = checkToken();
+    if (token) {
+        let headers: AxiosRequestHeaders = {} as AxiosRequestHeaders;
+        headers.set('Authorization', token.auth_hash);
+    }
+    return {} as AxiosRequestHeaders;
+}
+>>>>>>> Vaporwave

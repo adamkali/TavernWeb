@@ -1,10 +1,23 @@
 import Image from 'next/image';
 import { useTavernColor } from '../helpers/hooks/useTavernColor';
+<<<<<<< HEAD
 import styles from './page.module.css';
+=======
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faRightToBracket,
+    faUserPlus,
+    faDiceD20,
+} from '@fortawesome/free-solid-svg-icons';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import Card from './components/Card';
+import WelcomeList from './WelcomeList';
+>>>>>>> Vaporwave
 
 export default function Home() {
     const colorScheme = useTavernColor();
 
+<<<<<<< HEAD
     return (
         <div
             className={`flex flex1 flex-col w-full h-full bg-vaporwave-normal body-font font-source text-vaporwave-primary`}
@@ -137,6 +150,15 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+=======
+    const spacerDiv: JSX.Element = <div className="h-64" />;
+
+    return (
+        <div
+            className={`flex flex1 justify-center items-center bg-vaporwave-normal-2 text-vaporwave-primary`}
+        >
+            <WelcomeList />
+>>>>>>> Vaporwave
         </div>
     );
 }
