@@ -4,7 +4,7 @@
 
 @layer utilities {
     .card {
-        postion: absolute;
+        position: absolute;
         padding-top: 3rem;
         padding-bottom: 6rem;
         padding-left: 3rem;
@@ -184,21 +184,41 @@
         justify-content: center;
         align-items: center;
         border-bottom-width: 4px;
-        border-bottom-color: #b30086;
         border-bottom-left-radius: 0.5rem;
         border-bottom-right-radius: 0.5rem;
-        background: linear-gradient(0deg, #b30086 0%, #00114d00 100%);
-        color: #0099cc;
         padding-top: 0.5rem;
         padding-bottom: 2rem;
         padding-left: 1rem;
         padding-right: 1rem;
         margin-left: 3rem;
         margin-right: 3rem;
-        box-shadow: 0 20px 25px -5px #b30086, 0 4px 5px -6px #00114d00; 
         font-size: 1rem;
         font-weight: 100;
         line-height: 1.5;
+    }
+
+    .input--primary {
+        background: linear-gradient(0deg, #001e8c 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #001e8c, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #7390fb;
+    }
+
+    .input--accent {
+        background: linear-gradient(0deg, #b30086 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #b30086, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #ff00ff;
+    }
+
+    .input--dark {
+        background: linear-gradient(0deg, #5104af 0%, #00114d00 100%);
+        box-shadow: 0 20px 25px -5px #5104af, 0 4px 5px -6px #00114d00;
+        border-bottom-color: #aa65ff;
+    }
+
+    .input-holder {
+        outline: none;
+        border: none;
+        background: transparent;
     }
 
     .animate-light-flicker {
