@@ -1,50 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-<<<<<<< HEAD
-  content: [
-    "./app/**/*.{ts,tsx}",
-    "./pages/**/*.{js,jsx,ts,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        "light-primary": '#353535',
-        "light-secondary": '#83827D',
-        "light-tertiary": '#000000',
-        "light-normal": '#FFFEEF',
-        "light-dark": '#F9FFDD',
-        "light-accent": '#FFFCCC',
-        "dark-primary": '#FFFEEF',
-        "dark-secondary": '#F9FFDD',
-        "dark-tertiary": '#FFFCCC',
-        "dark-normal": '#353535',
-        "dark-dark": '#83827D',
-        "dark-accent": '#000000',
-        "royal-primary": '#6B5600',
-        "royal-secondary": '#B79300',
-        "royal-tertiary": '#B77500',
-        "royal-normal": '#FFD21A',
-        "royal-dark": '#FFF81A',
-        "royal-accent": '#FFAC1A',
-        "vaporwave-primary": '#aefdf2',
-        "vaporwave-secondary": '#5159ff',
-        "vaporwave-tertiary": '#FF00FF',
-        "vaporwave-normal": '#001e8c',
-        "vaporwave-dark": '#5204b0',
-        "vaporwave-accent": '#0b031e',
-        "fruit-primary": '#FF0000',
-        "fruit-secondary": '#6CEE00',
-        "fruit-tertiary": '#00CD75',
-        "fruit-normal": '#6C0000',
-        "fruit-dark": '#2B6000',
-        "fruit-accent": '#004A2A',
-      },
-    },
-  },
-  plugins: [],
-}
-=======
     content: [
         './app/**/*.{ts,tsx}',
         './pages/**/*.{js,jsx,ts,tsx}',
@@ -91,4 +46,3 @@ module.exports = {
     },
     plugins: [],
 };
->>>>>>> Vaporwave

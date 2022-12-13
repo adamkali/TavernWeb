@@ -1,6 +1,4 @@
 import '../styles/globals.css';
-<<<<<<< HEAD
-=======
 import Image from 'next/image';
 import Button from './components/Button';
 
@@ -9,7 +7,6 @@ import { BsFillPersonPlusFill } from '@react-icons/all-files/bs/BsFillPersonPlus
 
 import Link from 'next/link';
 
->>>>>>> Vaporwave
 export default function RootLayout({
     children,
 }: {
@@ -28,9 +25,6 @@ export default function RootLayout({
                     href="/favicon.ico"
                 />
             </head>
-<<<<<<< HEAD
-            <body>{children}</body>
-=======
             <body className="bg-vaporwave-normal-2 text-vaporwave-primary">
                 <div className="flex justify-evenly items-top">
                     <div className="w-1/5"> </div>
@@ -66,7 +60,6 @@ export default function RootLayout({
                 </div>
                 {children}
             </body>
->>>>>>> Vaporwave
         </html>
     );
 }
